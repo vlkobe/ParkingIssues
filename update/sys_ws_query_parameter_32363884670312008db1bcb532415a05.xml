@@ -8,7 +8,7 @@
         <sys_class_name>sys_ws_query_parameter</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2016-04-22 20:45:56</sys_created_on>
-        <sys_customer_update>true</sys_customer_update>
+        <sys_customer_update>false</sys_customer_update>
         <sys_id>32363884670312008db1bcb532415a05</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>description</sys_name>

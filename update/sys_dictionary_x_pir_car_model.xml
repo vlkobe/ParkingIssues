@@ -51,8 +51,8 @@
         <sys_class_name>sys_dictionary</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2016-04-22 02:17:04</sys_created_on>
-        <sys_customer_update>true</sys_customer_update>
-        <sys_id>1b483473673212008db1bcb532415a43</sys_id>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>4537554c670312008db1bcb532415aec</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>Model</sys_name>
         <sys_package display_value="Parking Issues" source="x_pir">2bc7b833673212008db1bcb532415a9d</sys_package>
@@ -60,8 +60,8 @@
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Parking Issues">2bc7b833673212008db1bcb532415a9d</sys_scope>
         <sys_update_name>sys_dictionary_x_pir_car_model</sys_update_name>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2016-04-22 02:17:04</sys_updated_on>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2016-04-22 23:09:49</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
