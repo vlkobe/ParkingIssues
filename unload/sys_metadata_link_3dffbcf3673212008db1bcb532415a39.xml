@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>unload</directory>
+        <documentkey>778f7cf3673212008db1bcb532415aba</documentkey>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="x_pir_employee_car">
+    <x_pir_employee_car action="INSERT_OR_UPDATE">
+        <car display_value="Toyota 4Runner">d59d38f3673212008db1bcb532415a23</car>
+        <color>Mauv</color>
+        <employee display_value="Kevin Griffin">bf8f7cf3673212008db1bcb532415ab9</employee>
+        <license_plate_number>9VFU720</license_plate_number>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2016-04-22 02:47:57</sys_created_on>
+        <sys_id>778f7cf3673212008db1bcb532415aba</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2016-04-22 02:47:57</sys_updated_on>
+    </x_pir_employee_car>
+</record_update>
+]]></payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2016-04-22 02:49:44</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>3dffbcf3673212008db1bcb532415a39</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>9VFU720</sys_name>
+        <sys_package display_value="Parking Issues" source="x_pir">2bc7b833673212008db1bcb532415a9d</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Parking Issues">2bc7b833673212008db1bcb532415a9d</sys_scope>
+        <sys_update_name>sys_metadata_link_3dffbcf3673212008db1bcb532415a39</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2016-04-22 02:49:44</sys_updated_on>
+        <tablename>x_pir_employee_car</tablename>
+    </sys_metadata_link>
+</record_update>

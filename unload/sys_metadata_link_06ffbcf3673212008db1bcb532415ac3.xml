@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>unload</directory>
+        <documentkey>ff8f7cf3673212008db1bcb532415aad</documentkey>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="x_pir_employee_car">
+    <x_pir_employee_car action="INSERT_OR_UPDATE">
+        <car display_value="Dodge Avenger">d59d38f3673212008db1bcb532415a1f</car>
+        <color>Turquoise</color>
+        <employee display_value="Aaron Hart">3b8f7cf3673212008db1bcb532415aad</employee>
+        <license_plate_number>9APY543</license_plate_number>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2016-04-22 02:47:57</sys_created_on>
+        <sys_id>ff8f7cf3673212008db1bcb532415aad</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2016-04-22 02:47:57</sys_updated_on>
+    </x_pir_employee_car>
+</record_update>
+]]></payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2016-04-22 02:49:45</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>06ffbcf3673212008db1bcb532415ac3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>9APY543</sys_name>
+        <sys_package display_value="Parking Issues" source="x_pir">2bc7b833673212008db1bcb532415a9d</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Parking Issues">2bc7b833673212008db1bcb532415a9d</sys_scope>
+        <sys_update_name>sys_metadata_link_06ffbcf3673212008db1bcb532415ac3</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2016-04-22 02:49:45</sys_updated_on>
+        <tablename>x_pir_employee_car</tablename>
+    </sys_metadata_link>
+</record_update>

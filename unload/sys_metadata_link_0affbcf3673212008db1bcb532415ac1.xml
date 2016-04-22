@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>unload</directory>
+        <documentkey>f78f7cf3673212008db1bcb532415ac4</documentkey>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="x_pir_employee_car">
+    <x_pir_employee_car action="INSERT_OR_UPDATE">
+        <car display_value="Audi A3">d59d38f3673212008db1bcb532415a1e</car>
+        <color>Indigo</color>
+        <employee display_value="Judith Mendoza">338f7cf3673212008db1bcb532415ac4</employee>
+        <license_plate_number>4ANW835</license_plate_number>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2016-04-22 02:47:58</sys_created_on>
+        <sys_id>f78f7cf3673212008db1bcb532415ac4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2016-04-22 02:47:58</sys_updated_on>
+    </x_pir_employee_car>
+</record_update>
+]]></payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2016-04-22 02:49:45</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>0affbcf3673212008db1bcb532415ac1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>4ANW835</sys_name>
+        <sys_package display_value="Parking Issues" source="x_pir">2bc7b833673212008db1bcb532415a9d</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Parking Issues">2bc7b833673212008db1bcb532415a9d</sys_scope>
+        <sys_update_name>sys_metadata_link_0affbcf3673212008db1bcb532415ac1</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2016-04-22 02:49:45</sys_updated_on>
+        <tablename>x_pir_employee_car</tablename>
+    </sys_metadata_link>
+</record_update>
