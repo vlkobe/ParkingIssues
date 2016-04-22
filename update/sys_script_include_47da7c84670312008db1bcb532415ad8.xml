@@ -19,7 +19,7 @@ EmployeeCar.prototype = {
 	find: function (licensePlate, color, make, model){
 		// First try to match the license plate exactly, if we have that, we're done
 		if (!gs.nil(licensePlate)) {
-			var car = findByLicensePlate(licensePlate);
+			var car = this.findByLicensePlate(licensePlate);
 			if (car) {
 				return car;
 			}
@@ -73,7 +73,7 @@ EmployeeCar.prototype = {
         <sys_created_on>2016-04-22 21:15:49</sys_created_on>
         <sys_customer_update>true</sys_customer_update>
         <sys_id>47da7c84670312008db1bcb532415ad8</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name>EmployeeCar</sys_name>
         <sys_package display_value="Parking Issues" source="x_pir">2bc7b833673212008db1bcb532415a9d</sys_package>
         <sys_policy>read</sys_policy>
@@ -81,6 +81,6 @@ EmployeeCar.prototype = {
         <sys_scope display_value="Parking Issues">2bc7b833673212008db1bcb532415a9d</sys_scope>
         <sys_update_name>sys_script_include_47da7c84670312008db1bcb532415ad8</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2016-04-22 22:01:34</sys_updated_on>
+        <sys_updated_on>2016-04-22 22:34:33</sys_updated_on>
     </sys_script_include>
 </record_update>
