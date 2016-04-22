@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_properties_category_m2m">
+    <sys_properties_category_m2m action="INSERT_OR_UPDATE">
+        <category display_value="Parking">2fb0d988670312008db1bcb532415a8f</category>
+        <order>300</order>
+        <property display_value="x_pir.issue.create_car_if_not_found" name="x_pir.issue.create_car_if_not_found">bb798508670312008db1bcb532415a6c</property>
+        <sys_class_name>sys_properties_category_m2m</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2016-04-22 22:42:04</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>23d0d988670312008db1bcb532415abe</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_pir.issue.create_car_if_not_found.Parking</sys_name>
+        <sys_package display_value="Parking Issues" source="x_pir">2bc7b833673212008db1bcb532415a9d</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Parking Issues">2bc7b833673212008db1bcb532415a9d</sys_scope>
+        <sys_update_name>sys_properties_category_m2m_23d0d988670312008db1bcb532415abe</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2016-04-22 22:42:04</sys_updated_on>
+    </sys_properties_category_m2m>
+</record_update>
