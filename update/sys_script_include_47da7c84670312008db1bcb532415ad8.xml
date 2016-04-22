@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_pir.EmployeeCar</api_name>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>EmployeeCar</name>
+        <script><![CDATA[var EmployeeCar = Class.create();
+
+EmployeeCar.TABLE_NAME = "x_pir_employee_car";
+EmployeeCar.LICENSE_PLATE_NUMBER = "license_plate_number";
+
+EmployeeCar.prototype = {
+    initialize: function() {
+    },
+	
+	find: function (licensePlate, color, make, model){
+		// First try to match the license plate exactly, if we have that, we're done
+		if (!gs.nil(licensePlate)) {
+			var car = findByLicensePlate(licensePlate);
+			if (car) {
+				return car;
+			}
+		}
+		
+		// Try searching by the description
+		var car = new GlideRecordSecure(EmployeeCar.TABLE_NAME);
+		if (!gs.nil(color))
+			car.addQuery("color", color);
+		if (!gs.nil(make))
+			car.addQuery("car.make", make);
+		if (!gs.nil(model))
+			car.addQuery("car.model", model);
+		if (gs.nil(car.getEncodedQuery()))
+			return null;
+		
+		car.query();
+		if (car.getRowCount() == 1) {
+			car.next();
+			return car;
+		}
+		
+		return null;
+	},
+	
+	findByLicensePlate: function (licensePlate) {
+		var car = new GlideRecordSecure(EmployeeCar.TABLE_NAME);
+		car.addQuery(EmployeeCar.LICENSE_PLATE_NUMBER, licensePlate);
+		car.query();
+		if (car.next()) {
+			return car;
+		}
+		
+		// Maybe it's a partial plate, try a CONTAINS search
+		car = new GlideRecordSecure(EmployeeCar.TABLE_NAME);
+		car.addQuery(EmployeeCar.LICENSE_PLATE_NUMBER, "CONTAINS", licensePlate);
+		car.query();
+		if (car.getRowCount() == 1) {
+			// Found one match, return it (if there are multiple matches, keep looking)
+			car.next();
+			return car;
+		}
+
+		return null;
+	},
+	
+    type: 'EmployeeCar'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2016-04-22 21:15:49</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>47da7c84670312008db1bcb532415ad8</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>EmployeeCar</sys_name>
+        <sys_package display_value="Parking Issues" source="x_pir">2bc7b833673212008db1bcb532415a9d</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Parking Issues">2bc7b833673212008db1bcb532415a9d</sys_scope>
+        <sys_update_name>sys_script_include_47da7c84670312008db1bcb532415ad8</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2016-04-22 22:01:34</sys_updated_on>
+    </sys_script_include>
+</record_update>

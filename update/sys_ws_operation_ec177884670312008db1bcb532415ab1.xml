@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_ws_operation">
+    <sys_ws_operation action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <consumes>application/json,application/xml,text/xml</consumes>
+        <consumes_customized>false</consumes_customized>
+        <default_operation_uri/>
+        <enforce_acl/>
+        <http_method>POST</http_method>
+        <name>report_issue</name>
+        <operation_script><![CDATA[(function process(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+	// Get the query parameters from the request (all strings)
+	var licensePlate = request.queryParams.license_plate+'';
+	var color = request.queryParams.color+'';
+	var make = request.queryParams.make+'';
+	var model = request.queryParams.model+'';
+	var description = request.queryParams.description+'';
+	
+	// Lookup the employee car using the parameters
+	// TODO: Create EmployeeCar script include
+	// TODO: Add method find() which accepts the specified string parms
+	//       and returns a GlideRecord (if found) or null (not found)
+	var car = new EmployeeCar().find(licensePlate, color, make, model);
+	if (!car) {
+		if (gs.getProperty("x_pir.create_car_if_not_found") == "true") {
+			// TODO: Add method create() which accepts the specified strings
+			//       and returns the created x_pir_employee_car GlideRecord
+			car = new EmployeeCar().create(licensePlate, color, make, model);
+		} else {
+			// Return a 404 not found
+			return new sn_ws_err.NotFoundError("Car could not be found");
+		}
+	}
+	
+	// TODO: create ParkingIssue script include
+	// TODO: create create() method that accepts the car (GlideRecord)
+	//       and the description (string) and returns the GlideRecord
+	//       for the created Parking Issue record, or null;
+	var issue = new ParkingIssue().create(car, description);
+	if (!issue) {
+		var myError = new sn_ws_err.ServiceError();
+		myError.setStatus(500); // Internal server error
+		myError.setMessage("Parking issue could not be created");
+		return myError;
+	}
+	
+	// Set response to HTTP Status 200 (OK) and return the newly created number in a JSON payload
+	response.setStatus(200);
+	response.setBody({"issue_number": issue.number});
+})(request, response);]]></operation_script>
+        <operation_uri>/api/x_pir/parking_issue</operation_uri>
+        <produces>application/json,application/xml,text/xml</produces>
+        <produces_customized>false</produces_customized>
+        <relative_path>/</relative_path>
+        <request_example/>
+        <requires_acl_authorization>false</requires_acl_authorization>
+        <requires_authentication>true</requires_authentication>
+        <short_description/>
+        <sys_class_name>sys_ws_operation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2016-04-22 20:50:33</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>ec177884670312008db1bcb532415ab1</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>report_issue</sys_name>
+        <sys_package display_value="Parking Issues" source="x_pir">2bc7b833673212008db1bcb532415a9d</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Parking Issues">2bc7b833673212008db1bcb532415a9d</sys_scope>
+        <sys_update_name>sys_ws_operation_ec177884670312008db1bcb532415ab1</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2016-04-22 21:55:38</sys_updated_on>
+        <web_service_definition display_value="Parking Issue">9a75b484670312008db1bcb532415a12</web_service_definition>
+        <web_service_version/>
+    </sys_ws_operation>
+</record_update>
