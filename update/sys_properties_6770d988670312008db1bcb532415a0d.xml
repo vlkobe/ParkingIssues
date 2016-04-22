@@ -11,7 +11,7 @@
         <sys_class_name>sys_properties</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2016-04-22 22:40:46</sys_created_on>
-        <sys_customer_update>true</sys_customer_update>
+        <sys_customer_update>false</sys_customer_update>
         <sys_id>6770d988670312008db1bcb532415a0d</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>x_pir.logging.destination</sys_name>

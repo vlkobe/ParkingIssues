@@ -5,7 +5,7 @@
         <sys_class_name>sys_properties_category</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2016-04-22 22:41:44</sys_created_on>
-        <sys_customer_update>true</sys_customer_update>
+        <sys_customer_update>false</sys_customer_update>
         <sys_id>2fb0d988670312008db1bcb532415a8f</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>Parking</sys_name>

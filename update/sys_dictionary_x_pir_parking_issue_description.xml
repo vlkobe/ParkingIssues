@@ -52,7 +52,7 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2016-04-22 20:08:56</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
-        <sys_id>3c7fcd48670312008db1bcb532415a9a</sys_id>
+        <sys_id>69b7118c670312008db1bcb532415ab8</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>Description</sys_name>
         <sys_package display_value="Parking Issues" source="x_pir">2bc7b833673212008db1bcb532415a9d</sys_package>
@@ -61,7 +61,7 @@
         <sys_scope display_value="Parking Issues">2bc7b833673212008db1bcb532415a9d</sys_scope>
         <sys_update_name>sys_dictionary_x_pir_parking_issue_description</sys_update_name>
         <sys_updated_by>system</sys_updated_by>
-        <sys_updated_on>2016-04-22 22:36:00</sys_updated_on>
+        <sys_updated_on>2016-04-22 23:12:03</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
