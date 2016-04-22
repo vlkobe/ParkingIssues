@@ -19,6 +19,7 @@ EmployeeCar.prototype = {
 	find: function (licensePlate, color, make, model){
 		// First try to match the license plate exactly, if we have that, we're done
 		if (!gs.nil(licensePlate)) {
+			gs.debug("Looking up by license plate: " + licensePlate);
 			var car = this.findByLicensePlate(licensePlate);
 			if (car) {
 				return car;
@@ -33,16 +34,20 @@ EmployeeCar.prototype = {
 			car.addQuery("car.make", make);
 		if (!gs.nil(model))
 			car.addQuery("car.model", model);
-		if (gs.nil(car.getEncodedQuery()))
+		if (gs.nil(car.getEncodedQuery())) {
+			gs.error("No suitable query conditions provided, aborting issue reporting.");
 			return null;
+		}
 		
 		car.query();
 		if (car.getRowCount() == 1) {
 			car.next();
+			gs.debug("Found employee car: " + car.getUniqueValue());
 			return car;
 		}
 		
 		if (gs.getProperty("x_pir.issue.create_car_if_not_found") === "true") {
+			gs.info("Car not found, but property to create on demand is true, creating a car");
 			return this.create(licensePlate, color, make, model);
 		}
 		return null;
@@ -63,9 +68,11 @@ EmployeeCar.prototype = {
 		if (car.getRowCount() == 1) {
 			// Found one match, return it (if there are multiple matches, keep looking)
 			car.next();
+			gs.debug("Found car by CONTAINS license plate search: " + car.getUniqueValue());
 			return car;
 		}
-
+	
+		gs.warn("Car not found");
 		return null;
 	},
 	
@@ -80,6 +87,7 @@ EmployeeCar.prototype = {
 		empCar.color = color;
 		empCar.license_plate_number = licensePlate;
 		var empCarId = empCar.insert();
+		gs.debug("Created car with id: " + empCarId);
 		empCar.get(empCarId);
 		return empCar;
 	},
@@ -90,6 +98,7 @@ EmployeeCar.prototype = {
 		car.addQuery("model", model);
 		car.query();
 		if (car.next()) {
+			gs.debug("Found car by make and model: " + car.getUniqueValue());
 			return car;
 		} 
 		
@@ -98,6 +107,7 @@ EmployeeCar.prototype = {
 		car.model = model;
 		var id = car.insert();
 		car.get(id);
+		gs.debug("Created car for {0} {1}: {2}", make, model, car.getUniqueValue());
 		return car;
 	},
 	
@@ -106,9 +116,9 @@ EmployeeCar.prototype = {
         <sys_class_name>sys_script_include</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2016-04-22 21:15:49</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
+        <sys_customer_update>true</sys_customer_update>
         <sys_id>47da7c84670312008db1bcb532415ad8</sys_id>
-        <sys_mod_count>8</sys_mod_count>
+        <sys_mod_count>9</sys_mod_count>
         <sys_name>EmployeeCar</sys_name>
         <sys_package display_value="Parking Issues" source="x_pir">2bc7b833673212008db1bcb532415a9d</sys_package>
         <sys_policy>read</sys_policy>
@@ -116,6 +126,6 @@ EmployeeCar.prototype = {
         <sys_scope display_value="Parking Issues">2bc7b833673212008db1bcb532415a9d</sys_scope>
         <sys_update_name>sys_script_include_47da7c84670312008db1bcb532415ad8</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2016-04-22 22:28:51</sys_updated_on>
+        <sys_updated_on>2016-04-22 23:24:26</sys_updated_on>
     </sys_script_include>
 </record_update>
