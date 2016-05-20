@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_properties">
+    <sys_properties action="INSERT_OR_UPDATE">
+        <choices>off,error,warn,info,debug</choices>
+        <description>Control the logging verbosity of the Parking app (Default=info)</description>
+        <ignore_cache>true</ignore_cache>
+        <is_private>false</is_private>
+        <name>x_pir.logging.verbosity</name>
+        <read_roles/>
+        <suffix>logging.verbosity</suffix>
+        <sys_class_name>sys_properties</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2016-05-20 18:52:31</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>bba8a041256312007f441bd8639380f0</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>x_pir.logging.verbosity</sys_name>
+        <sys_package display_value="Parking Issues" source="x_pir">2bc7b833673212008db1bcb532415a9d</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Parking Issues">2bc7b833673212008db1bcb532415a9d</sys_scope>
+        <sys_update_name>sys_properties_bba8a041256312007f441bd8639380f0</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2016-05-20 18:59:27</sys_updated_on>
+        <type>choicelist</type>
+        <value>info</value>
+        <write_roles/>
+    </sys_properties>
+    <sys_translated_text action="delete_multiple" query="documentkey=bba8a041256312007f441bd8639380f0"/>
+</record_update>

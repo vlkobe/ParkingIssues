@@ -11,5 +11,8 @@
         <index name="index2">
             <element name="employee"/>
         </index>
+        <index name="index3">
+            <element name="license_plate_number"/>
+        </index>
     </element>
 </database>
