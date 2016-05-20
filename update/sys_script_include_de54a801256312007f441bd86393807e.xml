@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_pir.EmployeeCar</api_name>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>EmployeeCar</name>
+        <script><![CDATA[var EmployeeCar = Class.create();
+EmployeeCar.prototype = {
+    initialize: function() {
+    },
+
+	find: function(licensePlate) {
+		var car = new GlideRecordSecure("x_pir_employee_car");
+		if(car.get("license_plate_number",licensePlate)) {
+			return car;
+		}
+		return null;		
+	},
+	
+    type: 'EmployeeCar'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2016-05-20 18:36:35</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>de54a801256312007f441bd86393807e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>EmployeeCar</sys_name>
+        <sys_package display_value="Parking Issues" source="x_pir">2bc7b833673212008db1bcb532415a9d</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Parking Issues">2bc7b833673212008db1bcb532415a9d</sys_scope>
+        <sys_update_name>sys_script_include_de54a801256312007f441bd86393807e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2016-05-20 18:36:35</sys_updated_on>
+    </sys_script_include>
+</record_update>

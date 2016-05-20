@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_ws_query_parameter_map">
+    <sys_ws_query_parameter_map action="INSERT_OR_UPDATE">
+        <sys_class_name>sys_ws_query_parameter_map</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2016-05-20 18:30:51</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>01d36801256312007f441bd863938054</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>5b13e401256312007f441bd863938058</sys_name>
+        <sys_package display_value="Parking Issues" source="x_pir">2bc7b833673212008db1bcb532415a9d</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Parking Issues">2bc7b833673212008db1bcb532415a9d</sys_scope>
+        <sys_update_name>sys_ws_query_parameter_map_01d36801256312007f441bd863938054</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2016-05-20 18:30:51</sys_updated_on>
+        <web_service_operation display_value="report_issue">8c632801256312007f441bd86393802f</web_service_operation>
+        <web_service_query_parameter display_value="license_plate">5b13e401256312007f441bd863938058</web_service_query_parameter>
+    </sys_ws_query_parameter_map>
+</record_update>
